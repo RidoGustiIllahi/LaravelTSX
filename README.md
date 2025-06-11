@@ -5,6 +5,9 @@
 
 <div>
   <img src="public/ERD.jpg" alt="TeamSync Logo" width="80">
+</div>
+
+<div>
   <img src="public/Alursistem.jpg" alt="TeamSync Logo" width="80">
 </div>
 
