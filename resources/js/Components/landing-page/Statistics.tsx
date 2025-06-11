@@ -15,7 +15,7 @@ export const Statistics = () => {
     },
     {
       value: 25,
-      label: "Teams Using TeamSync",
+      label: "Teams Using TimBurnOut",
       suffix: "+",
     },
     {

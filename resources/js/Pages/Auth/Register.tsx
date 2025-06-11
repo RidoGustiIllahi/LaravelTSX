@@ -41,16 +41,6 @@ export default function Register() {
     });
   };
 
-  const handleSocialLogin = async (provider: string) => {
-    try {
-      const response = await fetch(route("socialite.redirect", { provider }));
-      const data = await response.json();
-      window.location.href = data.url;
-    } catch (error) {
-      console.error("Error during social login:", error);
-    }
-  };
-
   return (
     <AuthFlowLayout>
       <Head title="Register" />
