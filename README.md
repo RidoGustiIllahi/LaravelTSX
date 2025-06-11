@@ -4,11 +4,11 @@
 </div>
 
 <div>
-  <img src="public/ERD.jpg" alt="TeamSync Logo" width="80">
+  <img src="public/ERD.jpg" alt="TeamSync Logo">
 </div>
 
 <div>
-  <img src="public/Alursistem.jpg" alt="TeamSync Logo" width="80">
+  <img src="public/Alursistem.jpg" alt="TeamSync Logo">
 </div>
 
 <p align="center">Aplikasi manajemen proyek modern yang dibangun dengan Laravel dan React, dirancang untuk membantu tim berkolaborasi secara efisien melalui manajemen tugas intuitif dan komunikasi real-time.</p>
