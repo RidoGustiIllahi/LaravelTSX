@@ -60,7 +60,6 @@ export default function Errors({ status }: { status: number }) {
       <div className="flex min-h-screen flex-col items-center justify-center">
         <Card className="m-4 shadow-lg">
           <CardHeader className="flex flex-col items-center">
-            <ApplicationLogo className="mb-4 h-12 w-12 fill-primary" />
             <CardTitle className="text-4xl font-bold text-destructive">
               {status}
             </CardTitle>

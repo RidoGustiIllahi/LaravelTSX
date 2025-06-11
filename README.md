@@ -1,84 +1,87 @@
 <div align="center">
-  <img src="public/logo.svg" alt="TeamSync Logo" width="80">
-  
-  # TeamSync
+
+  # TeamBurnOut
 </div>
 
-<p align="center">A modern project management application built with Laravel and React, designed to help teams collaborate efficiently through intuitive task management and real-time communication.</p>
+<div>
+  <img src="public/ERD.jpg" alt="TeamSync Logo" width="80">
+  <img src="public/Alursistem.jpg" alt="TeamSync Logo" width="80">
+</div>
 
-## ✨ Features
+<p align="center">Aplikasi manajemen proyek modern yang dibangun dengan Laravel dan React, dirancang untuk membantu tim berkolaborasi secara efisien melalui manajemen tugas intuitif dan komunikasi real-time.</p>
 
-### 📊 Project Management
+## ✨ Fitur
 
-- Create and manage multiple projects
-- Track project progress and completion status
-- Invite team members with role-based permissions (Project Manager, Project Member)
-- Real-time project statistics and analytics
-- Project status tracking (Pending, In Progress, Completed)
+### 📊 Manajemen Proyek
 
-### ✅ Task Management
+- Buat dan kelola banyak proyek
+- Lacak kemajuan dan status penyelesaian proyek
+- Undang anggota tim dengan izin berbasis peran (Manajer Proyek, Anggota Proyek)
+- Statistik dan analitik proyek real-time
+- Pelacakan status proyek (Tertunda, Dalam Proses, Selesai)
 
-- Create, assign, and track tasks within projects
-- Task categorization with customizable labels
-- Task prioritization (Low, Medium, High)
-- Task status tracking (Pending, In Progress, Completed)
-- Task discussions with threaded comments
-- Task filtering and sorting capabilities
+### ✅ Manajemen Tugas
 
-### 👥 Team Collaboration
+- Buat, tetapkan, dan lacak tugas dalam proyek
+- Kategorisasi tugas dengan label yang dapat disesuaikan
+- Prioritas tugas (Rendah, Sedang, Tinggi)
+- Pelacakan status tugas (Tertunda, Dalam Proses, Selesai)
+- Diskusi tugas dengan komentar berulir
+- Penyaringan dan pengurutan tugas
 
-- Role-based access control
-- Project member invitation system
-- Real-time notifications for project updates
-- Task assignment and reassignment
-- Team member management
-- Collaborative task discussions
+### 👥 Kolaborasi Tim
 
-### 🎨 User Interface
+- Kontrol akses berbasis peran
+- Sistem undangan anggota proyek
+- Notifikasi real-time untuk pembaruan proyek
+- Penugasan dan penugasan ulang tugas
+- Manajemen anggota tim
+- Diskusi tugas kolaboratif
 
-- Modern, responsive design
-- Dark/Light theme support
-- Intuitive navigation
-- Real-time updates
-- Dashboard with project and task overview
-- Filtering and sorting capabilities
+### 🎨 Antarmuka Pengguna
 
-### 🔐 Authentication
+- Desain modern dan responsif
+- Dukungan tema Gelap/Terang
+- Navigasi intuitif
+- Pembaruan real-time
+- Dasbor dengan ikhtisar proyek dan tugas
+- Kemampuan penyaringan dan pengurutan
 
-- Traditional email/password authentication
-- Social login support:
-  - GitHub authentication
-  - Google authentication
-- Password reset functionality
-- Email verification
+### 🔐 Autentikasi
 
-## 🛠️ Tech Stack
+- Autentikasi email/kata sandi tradisional
+- Dukungan login sosial:
+  - Autentikasi GitHub
+  - Autentikasi Google
+- Fungsi reset kata sandi
+- Verifikasi email
+
+## 🛠️ Teknologi yang Digunakan
 
 ### 🔧 Backend
 
 - PHP 8.x
 - Laravel 11.x
 - MySQL
-- Laravel Sanctum for authentication
-- Spatie Permissions for role management
-- Real-time notifications with Laravel Reverb
+- Laravel Sanctum untuk autentikasi
+- Spatie Permissions untuk manajemen peran
+- Notifikasi real-time dengan Laravel Reverb
 
 ### 🎯 Frontend
 
-- React with TypeScript
-- Inertia.js for SPA-like experience
-- TailwindCSS for styling
-- Shadcn UI components
-- Lucide icons
-- Real-time updates with WebSockets
+- React dengan TypeScript
+- Inertia.js untuk pengalaman seperti SPA
+- TailwindCSS untuk styling
+- Komponen UI Shadcn
+- Ikon Lucide
+- Pembaruan real-time dengan WebSockets
 
-## 📥 Installation
+## 📥 Instalasi
 
-1. Clone the repository
+1. Clone repositori
 
 ```bash
-git clone https://github.com/stekatag/project-management-app.git
-cd project-management-app
+git clone https://github.com/RidoGustiIllahi/Tubes-Pemweb-Lanjut
 ```
 
 2. Install PHP dependencies
@@ -90,7 +93,7 @@ composer install
 3. Install JavaScript dependencies
 
 ```bash
-pnpm install # or npm install if you don't have pnpm installed
+npm install
 ```
 
 4. Configure environment variables
@@ -99,29 +102,9 @@ pnpm install # or npm install if you don't have pnpm installed
 cp .env.example .env
 ```
 
-Update the following in your .env file:
+Perbaharui hal berikut di file .env Anda:
 
-- Database credentials
-- App URL
-- Mail configuration
-- Reverb/WebSocket settings
-- OAuth Socialite settings (optional)
-
-### Social Login Configuration
-
-Add these to your .env file for social authentication:
-
-```bash
-# GitHub OAuth
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
-GITHUB_REDIRECT_URI="${OAUTH_BASE_URL}/auth/github/callback"
-
-# Google OAuth
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-GOOGLE_REDIRECT_URI="${OAUTH_BASE_URL}/auth/google/callback"
-```
+- Database credential
 
 5. Generate application key
 
@@ -129,22 +112,28 @@ GOOGLE_REDIRECT_URI="${OAUTH_BASE_URL}/auth/google/callback"
 php artisan key:generate
 ```
 
-6. Run migrations and seeders
+6. Jalankan migrations dan seeders
 
 ```bash
 php artisan migrate --seed
 ```
 
+7. Hubungkan dengan storage
+
+```bash
+php artisan storage:link
+```
+
 ## 👤 Default Credentials
 
-After seeding the database, you can login with:
+Setelah seeding database, Anda dapat login dengan:
 
 - Email: admin@example.com
 - Password: password1
 
 ## 💻 Development
 
-For local development:
+Untuk pengembahan dalam local:
 
 1. Start the Laravel development server
 
@@ -155,7 +144,7 @@ php artisan serve
 2. Run Vite development server
 
 ```bash
-pnpm dev # or npm run dev if you don't have pnpm installed
+npm run dev
 ```
 
 3. Run WebSocket server (for real-time features)
@@ -169,15 +158,3 @@ php artisan reverb:start
 ```bash
 php artisan queue:listen
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

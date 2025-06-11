@@ -56,6 +56,7 @@ class DatabaseSeeder extends Seeder {
             PermissionsEnum::ViewTasks->value,
             PermissionsEnum::CommentOnTasks->value,
             PermissionsEnum::DeleteComments->value,
+            PermissionsEnum::ManageComments->value,
             PermissionsEnum::ManageTasks->value,
         ]);
 
@@ -124,7 +125,7 @@ class DatabaseSeeder extends Seeder {
                         'color' => $status->color,
                         'is_default' => true,
                     ]);
-                });
+                }); 
 
                 // Create tasks with references to random global statuses and attach random labels
                 $tasks = Task::factory()
@@ -149,5 +150,11 @@ class DatabaseSeeder extends Seeder {
                     $task->labels()->attach($randomLabels->pluck('id'));
                 });
             });
+
+        $this->call([
+            UserSeeder::class,
+            ProjectSeeder::class,
+            TaskSeeder::class,
+        ]);
     }
 }
